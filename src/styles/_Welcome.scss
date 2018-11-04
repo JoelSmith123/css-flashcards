@@ -1,0 +1,20 @@
+.Welcome {
+  height: 100vh;
+  text-align: center;
+}
+
+.welcome-title {
+  margin-top: 0;
+  padding-top: 200px;
+}
+
+.new-player-btn,
+.returning-player-btn {
+  border-radius: 12px;
+  display: block;
+  font-size: 1.5rem;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 300px;
+}
