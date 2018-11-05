@@ -23,10 +23,7 @@
   padding-top: 200px;
 }
 
-.new-player-btn,
-.returning-player-btn,
-.returning-player-select-btn,
-.confidence-select-btn {
+.multipurpose-btn {
   background: transparent;
   background-color: rgba(245, 245, 245, 0.2);
   border: 2px solid rgba(245, 245, 245, 0.3);
@@ -84,7 +81,13 @@
   margin-top: -100px;
 }
 
+.start-game-title {
+  margin-top: -270px;
+}
+
 .margin-remove {
-  margin-top: 0;
+  height: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
