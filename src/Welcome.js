@@ -7,17 +7,24 @@ export default class Welcome extends Component {
     this.state = {
       welcomePage: true,
       newPlayer: null,
-      previousState: null,
       selectConfidence: null
     };
   }
 
   changeStateToPreviousState = () => {
-    this.setState({
-      welcomePage: true,
-      previousState: null,
-      selectConfidence: null
-    })
+    if (this.state.selectConfidence) {
+      this.setState({
+        welcomePage: null,
+        newPlayer: true,
+        selectConfidence: null
+      })
+    } else {      
+      this.setState({
+        welcomePage: true,
+        selectConfidence: null
+      })
+    }
+
     console.log('BACK!')
   }
 
@@ -76,7 +83,7 @@ export default class Welcome extends Component {
                 <button className='new-player-input-back-btn' type='button' onClick={this.changeStateToPreviousState}><i className="fas fa-angle-left"></i></button>
               </div>
             ) : (
-              <div className={ this.state.selectConfidence ? 'Welcome-two slide-in' : 'Welcome-two' }>
+              <div className={ this.state.selectConfidence ? 'Welcome-two slide-in' : 'Welcome-two margin-remove' }>
                 <h1>  </h1>
               </div>            
           )}
