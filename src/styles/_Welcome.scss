@@ -4,13 +4,13 @@
 
 .Welcome-two {
   margin-top: -200px;
-  margin-right: -1500px;
+  margin-right: -3000px;
   transition: all 500ms ease;
 }
 
 .slide-out {
   color: red;
-  margin-left: -1500px;
+  margin-left: -3000px;
 }
 
 .slide-in {
@@ -23,7 +23,8 @@
 }
 
 .new-player-btn,
-.returning-player-btn {
+.returning-player-btn,
+.returning-player-select-btn {
   background: transparent;
   background-color: rgba(245, 245, 245, 0.2);
   border: 2px solid rgba(245, 245, 245, 0.3);
@@ -74,9 +75,8 @@
     border-radius: 12px;
     cursor: pointer;
   }
-
-  .fas {
-    // vertical-align: middle;
-  }
 }
 
+.returning-player-select-btn {
+
+}

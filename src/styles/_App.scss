@@ -1,5 +1,5 @@
 .App::before {
-  background-image: url('https://source.unsplash.com/collection/3149823');
+  background-image: url('https://source.unsplash.com/collection/3149823/1600x900');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,6 +13,7 @@
 }
 
 .App {
+  overflow-x: hidden;
   text-align: center;
   z-index: 0;
 }
