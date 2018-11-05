@@ -4,17 +4,17 @@
 
 .Welcome-two {
   margin-top: -200px;
-  margin-right: -3000px;
+  margin-right: -500vw;
   transition: all 500ms ease;
 }
 
 .slide-out {
-  color: red;
-  margin-left: -3000px;
+  margin-left: -500vw;
+  margin-right: 500vw;
 }
 
 .slide-in {
-  margin-right: 0px;
+  margin-right: 0vw;
 }
 
 .welcome-title {
@@ -24,7 +24,8 @@
 
 .new-player-btn,
 .returning-player-btn,
-.returning-player-select-btn {
+.returning-player-select-btn,
+.confidence-select-btn {
   background: transparent;
   background-color: rgba(245, 245, 245, 0.2);
   border: 2px solid rgba(245, 245, 245, 0.3);
@@ -59,7 +60,8 @@
   width: 300px;
 }
 
-.new-player-input-back-btn {
+.new-player-input-back-btn,
+.new-player-input-forward-btn {
   background: transparent;
   border: none;
   box-sizing: border-box;
@@ -77,6 +79,6 @@
   }
 }
 
-.returning-player-select-btn {
-
+.confidence-select-title {
+  margin-top: -100px;
 }
