@@ -1,20 +1,20 @@
-.Welcome::before {
-  background-image: url('https://source.unsplash.com/collection/3149823');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  content: '';
-  filter: blur(8px) opacity(.7);
-  height: 100vh;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
+.Welcome-one {
+  transition: all 500ms ease;
 }
 
-.Welcome {
-  text-align: center;
-  z-index: 0;
+.Welcome-two {
+  margin-top: -200px;
+  margin-right: -1500px;
+  transition: all 500ms ease;
+}
+
+.slide-out {
+  color: red;
+  margin-left: -1500px;
+}
+
+.slide-in {
+  margin-right: 0px;
 }
 
 .welcome-title {
@@ -38,5 +38,45 @@
 
   &:hover {
     background-color: rgba(245, 245, 245, 0.5);
+    cursor: pointer;
   }
 }
+
+.new-player-input {
+  background: transparent;
+  background-color: rgba(245, 245, 245, 0.2);
+  border: 2px solid rgba(245, 245, 245, 0.3);
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1.5rem;
+  height: 50px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  outline: none;
+  padding-left: 10px;
+  width: 300px;
+}
+
+.new-player-input-back-btn {
+  background: transparent;
+  border: none;
+  box-sizing: border-box;
+  font-size: 3rem;
+  height: 70px;
+  line-height: 10px;
+  outline: none;
+  width: 70px;
+
+  &:hover {
+    background-color: rgba(245, 245, 245, 0.2);
+    border: 2px solid rgba(245, 245, 245, 0.3);
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .fas {
+    // vertical-align: middle;
+  }
+}
+

@@ -1,1 +1,20 @@
+.App::before {
+  background-image: url('https://source.unsplash.com/collection/3149823');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: '';
+  filter: blur(8px) opacity(.7);
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.App {
+  text-align: center;
+  z-index: 0;
+}
+
 
