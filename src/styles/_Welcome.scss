@@ -1,6 +1,20 @@
-.Welcome {
+.Welcome::before {
+  background-image: url('https://source.unsplash.com/collection/3149823');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: '';
+  filter: blur(8px) opacity(.7);
   height: 100vh;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.Welcome {
   text-align: center;
+  z-index: 0;
 }
 
 .welcome-title {
@@ -10,11 +24,19 @@
 
 .new-player-btn,
 .returning-player-btn {
+  background: transparent;
+  background-color: rgba(245, 245, 245, 0.2);
+  border: 2px solid rgba(245, 245, 245, 0.3);
   border-radius: 12px;
   display: block;
   font-size: 1.5rem;
   height: 50px;
   margin: 0 auto;
   margin-bottom: 20px;
+  outline: none;
   width: 300px;
+
+  &:hover {
+    background-color: rgba(245, 245, 245, 0.5);
+  }
 }
