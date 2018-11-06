@@ -25,10 +25,13 @@ export default class FlashcardBoard extends Component {
     return (
       <div className='FlashcardBoard'>
         <Flashcard 
-          question={this.state.flashcardProblems ? this.state.flashcardProblems.question : null}/>
+          question={this.state.flashcardProblems ? this.state.flashcardProblems.question : null}
+          correctAnswerIndex={this.state.flashcardProblems ? this.state.flashcardProblems.correctAnswerIndex : null}/>
         <Flashcard 
           answers={this.state.flashcardProblems ? this.state.flashcardProblems.answers : null}
-          codeFormatAnswers={this.state.flashcardProblems ? this.state.flashcardProblems.codeFormatAnswers : null}/>
+          codeFormatAnswers={this.state.flashcardProblems ? this.state.flashcardProblems.codeFormatAnswers : null}
+          correctAnswerIndex={this.state.flashcardProblems ? this.state.flashcardProblems.correctAnswerIndex : null}
+          correctAnswer={this.state.flashcardProblems ? this.state.flashcardProblems.answers[this.state.flashcardProblems.correctAnswerIndex] : null}/>
       </div>
     );
   }

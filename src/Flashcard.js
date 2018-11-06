@@ -4,14 +4,24 @@ export default class Flashcard extends Component {
   constructor() {
     super();
     this.state = {
-      phoneyState: null
+      showAnswer: false,
+      correctAnswerKey: null
     };
   }
 
+  checkAnswer = (key) => {
+    if (this.props.correctAnswerIndex) {
+      if (key === this.props.correctAnswerIndex) {
+        this.setState({
+          showAnswer: true,
+          correctAnswerKey: key
+        })
+      }      
+    }
+  } 
 
 
   render() {
-    console.log(this.props)
     return (
       <div className='Flashcard'>
         <section className='question-one'>
@@ -25,13 +35,29 @@ export default class Flashcard extends Component {
           {
             this.props.answers ? 
               this.props.answers.map((answer, key) => {
-                return <p key={key}>{answer}</p>
+                if (this.state.correctAnswerKey){
+                  if (key === this.state.correctAnswerKey) {
+                    return <p className='possible-answer correct-answer' key={key}>{answer}</p>
+                  } else {
+                    return <p className='possible-answer wrong-answer' key={key} onClick={() => { this.checkAnswer(key)} }>{answer}</p>
+                  }                  
+                } else {
+                  return <p className='possible-answer' key={key} onClick={() => { this.checkAnswer(key)} }>{answer}</p>
+                }
               })
             : null
           }
         </section>
         <section className='question-two'>
-
+          <p>
+            {
+              this.state.showAnswer ?
+                this.props.correctAnswer ?
+                  this.props.correctAnswer
+                : null
+              : null
+            }
+          </p>
         </section>
       </div>
     );
