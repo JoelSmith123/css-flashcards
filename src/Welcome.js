@@ -20,15 +20,12 @@ export default class Welcome extends Component {
         selectConfidence: true,
         gameReady: false
       })
-      console.log('BACK TO CONFIDENCE SELECTION')      
-    }
-     else if (this.state.selectConfidence) {
+    } else if (this.state.selectConfidence) {
       this.setState({
         welcomePage: null,
         newPlayer: true,
         selectConfidence: null
       })
-      console.log('BACK TO NEW PLAYER SELECTION')
     } else {      
       this.setState({
         welcomePage: true,
@@ -42,7 +39,6 @@ export default class Welcome extends Component {
       welcomePage: false,
       newPlayer: true
     })
-    console.log('1st!')
   }
 
   returningPlayerNameSelectionScreenState = () => {
@@ -50,7 +46,6 @@ export default class Welcome extends Component {
       welcomePage: false,
       newPlayer: false
     })
-    console.log('2nd!')
   }
 
   selectConfidenceScreenState = () => {
@@ -58,14 +53,12 @@ export default class Welcome extends Component {
       welcomePage: false,
       selectConfidence: true,
     })
-    console.log('3rd!')
   }
 
   gameReadyScreenState = () => {
     this.setState({
       gameReady: true
     })
-    console.log('GAME READY!')
   }
 
   render() {      

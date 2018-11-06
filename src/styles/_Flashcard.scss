@@ -1,0 +1,30 @@
+.Flashcard {
+  align-self: center;
+  align-items: center;
+  background-color: rgba(245, 245, 245, 0.6);
+  border: 2px solid rgba(245, 245, 245, 0.3);
+  border-radius: 12px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  height: 80vh;
+  justify-self: center;
+  justify-items: center;
+  width: 40vw;
+}
+
+.question-one,
+.question-two {
+  background-color: rgba(245, 245, 245, 0.6);
+  border: 2px solid rgba(245, 245, 245, 0.3);
+  border-radius: 12px;
+  height: 85%;
+  width: 85%;
+}
+
+.question-one {
+  grid-row: 1 / 2;
+}
+
+.question-two {
+  grid-row: 2 / 3;
+}
