@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 
 export default class Flashcard extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      showAnswer: false,
+      showAnswer: this.props.correctAnswerIndication,
       correctAnswerKey: null
     };
   }
 
   checkAnswer = (key) => {
+    this.props.updateShowAnswerIndicator(false)
     if (this.props.correctAnswerIndex) {
       if (key === this.props.correctAnswerIndex) {
         this.setState({
@@ -17,9 +18,8 @@ export default class Flashcard extends Component {
           correctAnswerKey: key
         })
       }      
-    }
+    }          
   } 
-
 
   render() {
     return (

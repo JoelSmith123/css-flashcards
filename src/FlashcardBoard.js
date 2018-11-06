@@ -6,7 +6,7 @@ export default class FlashcardBoard extends Component {
     super();
     this.state = {
       flashcardProblems: null,
-
+      showAnswerIndicator: false
     };
   }
 
@@ -25,9 +25,18 @@ export default class FlashcardBoard extends Component {
       .catch(error => console.error(error));    
   }
 
+  updateShowAnswerIndicator = (boolean) => {
+    this.setState({
+      showAnswerIndicator: boolean
+    })
+  }
+
   newFlashcardProblem = (e) => {
     e.preventDefault();
     this.newAPICall();
+    this.setState({
+      showAnswerIndicator: false
+    })
   }
 
   render() {
@@ -36,14 +45,18 @@ export default class FlashcardBoard extends Component {
         <Flashcard 
           question={this.state.flashcardProblems ? this.state.flashcardProblems.question ? this.state.flashcardProblems.question : null : null}
           codeFormatQuestion={this.state.flashcardProblems ? this.state.flashcardProblems.codeFormatQuestion ? this.state.flashcardProblems.codeFormatQuestion : null : null}
-          correctAnswerIndex={this.state.flashcardProblems ? this.state.flashcardProblems.correctAnswerIndex : null}/>
+          correctAnswerIndex={this.state.flashcardProblems ? this.state.flashcardProblems.correctAnswerIndex : null}
+          correctAnswerIndication={this.state.showAnswerIndicator}
+          updateShowAnswerIndicator={this.updateShowAnswerIndicator}/>
 
         <Flashcard 
           answers={this.state.flashcardProblems ? this.state.flashcardProblems.answers ? this.state.flashcardProblems.answers: null : null}
           codeFormatAnswers={this.state.flashcardProblems ? this.state.flashcardProblems.codeFormatAnswers ? this.state.flashcardProblems.codeFormatAnswers: null : null}
           correctAnswerIndex={this.state.flashcardProblems ? this.state.flashcardProblems.correctAnswerIndex : null}
           correctAnswerCodeFormat={this.state.flashcardProblems ? this.state.flashcardProblems.codeFormatAnswers ? this.state.flashcardProblems.codeFormatAnswers[this.state.flashcardProblems.correctAnswerIndex] : null : null}
-          correctAnswer={this.state.flashcardProblems ? this.state.flashcardProblems.answers ? this.state.flashcardProblems.answers[this.state.flashcardProblems.correctAnswerIndex] : null : null}/>
+          correctAnswer={this.state.flashcardProblems ? this.state.flashcardProblems.answers ? this.state.flashcardProblems.answers[this.state.flashcardProblems.correctAnswerIndex] : null : null}
+          correctAnswerIndication={this.state.showAnswerIndicator}
+          updateShowAnswerIndicator={this.updateShowAnswerIndicator}/>
 
           <footer className='flashcard-board-footer'>
             <button className='flashcard-board-footer-btn'></button>
