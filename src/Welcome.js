@@ -8,9 +8,10 @@ export default class Welcome extends Component {
       welcomePage: true,
       newPlayer: null,
       selectConfidence: null,
-      gameReady: null
+      gameReady: null,
     };
   }
+
 
   changeStateToPreviousState = () => {
     if (this.state.gameReady ) {
@@ -73,7 +74,7 @@ export default class Welcome extends Component {
         {this.state.newPlayer ? (
           <div className={ this.state.selectConfidence ? 'Welcome-two slide-out' : this.state.welcomePage ? 'Welcome-two' : 'Welcome-two slide-in' }>
            <h1>Enter your name</h1>
-           <input className='new-player-input' type='text' placeholder='Type name here' />
+           <input className='new-player-input' type='text' placeholder='Type name here' value={this.props.playerName} onChange={this.props.acceptPlayerName}/>
            <button className='new-player-input-back-btn' type='button' onClick={this.changeStateToPreviousState}><i className="fas fa-angle-left"></i></button>
            <button className='new-player-input-forward-btn' type='button' onClick={this.selectConfidenceScreenState}><i className="fas fa-angle-right"></i></button>
           </div>

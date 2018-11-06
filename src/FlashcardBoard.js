@@ -40,15 +40,15 @@ export default class FlashcardBoard extends Component {
   }
 
   storeWrongAnswer = () => {
-    if (!localStorage.player1) {
-      localStorage.setItem('player1', JSON.stringify([]))
-      let playerStoredArray = JSON.parse(localStorage.getItem('player1'))
+    if (!localStorage[this.props.playerName]) {
+      localStorage.setItem([this.props.playerName], JSON.stringify([]))
+      let playerStoredArray = JSON.parse(localStorage.getItem([this.props.playerName]))
       playerStoredArray.push(this.state.flashcardProblems)
-      localStorage.setItem('player1', JSON.stringify(playerStoredArray))      
+      localStorage.setItem([this.props.playerName], JSON.stringify(playerStoredArray))
     } else {
-      let playerStoredArray = JSON.parse(localStorage.getItem('player1'))
+      let playerStoredArray = JSON.parse(localStorage.getItem([this.props.playerName]))
       playerStoredArray.push(this.state.flashcardProblems)
-      localStorage.setItem('player1', JSON.stringify(playerStoredArray))      
+      localStorage.setItem([this.props.playerName], JSON.stringify(playerStoredArray))      
     }
   }
 
