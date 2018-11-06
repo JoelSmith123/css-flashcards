@@ -39,6 +39,19 @@ export default class FlashcardBoard extends Component {
     })
   }
 
+  storeWrongAnswer = () => {
+    if (!localStorage.player1) {
+      localStorage.setItem('player1', JSON.stringify([]))
+      let playerStoredArray = JSON.parse(localStorage.getItem('player1'))
+      playerStoredArray.push(this.state.flashcardProblems)
+      localStorage.setItem('player1', JSON.stringify(playerStoredArray))      
+    } else {
+      let playerStoredArray = JSON.parse(localStorage.getItem('player1'))
+      playerStoredArray.push(this.state.flashcardProblems)
+      localStorage.setItem('player1', JSON.stringify(playerStoredArray))      
+    }
+  }
+
   render() {
     return (
       <div className='FlashcardBoard'>
@@ -47,7 +60,8 @@ export default class FlashcardBoard extends Component {
           codeFormatQuestion={this.state.flashcardProblems ? this.state.flashcardProblems.codeFormatQuestion ? this.state.flashcardProblems.codeFormatQuestion : null : null}
           correctAnswerIndex={this.state.flashcardProblems ? this.state.flashcardProblems.correctAnswerIndex : null}
           correctAnswerIndication={this.state.showAnswerIndicator}
-          updateShowAnswerIndicator={this.updateShowAnswerIndicator}/>
+          updateShowAnswerIndicator={this.updateShowAnswerIndicator}
+          storeWrongAnswer={this.storeWrongAnswer}/>
 
         <Flashcard 
           answers={this.state.flashcardProblems ? this.state.flashcardProblems.answers ? this.state.flashcardProblems.answers: null : null}
@@ -56,7 +70,8 @@ export default class FlashcardBoard extends Component {
           correctAnswerCodeFormat={this.state.flashcardProblems ? this.state.flashcardProblems.codeFormatAnswers ? this.state.flashcardProblems.codeFormatAnswers[this.state.flashcardProblems.correctAnswerIndex] : null : null}
           correctAnswer={this.state.flashcardProblems ? this.state.flashcardProblems.answers ? this.state.flashcardProblems.answers[this.state.flashcardProblems.correctAnswerIndex] : null : null}
           correctAnswerIndication={this.state.showAnswerIndicator}
-          updateShowAnswerIndicator={this.updateShowAnswerIndicator}/>
+          updateShowAnswerIndicator={this.updateShowAnswerIndicator}
+          storeWrongAnswer={this.storeWrongAnswer}/>
 
           <footer className='flashcard-board-footer'>
             <button className='flashcard-board-footer-btn'></button>

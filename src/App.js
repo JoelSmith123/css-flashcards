@@ -21,11 +21,11 @@ class App extends Component {
     return (
       <div className="App">
         {
-          this.state.gameActive ? (
+          // this.state.gameActive ? (
             <FlashcardBoard />
-          ) : (
-            <Welcome gameActive={this.updateGameActiveState}/>
-         )
+          // ) : (
+            // <Welcome gameActive={this.updateGameActiveState}/>
+         // )
         }
       </div>
     );

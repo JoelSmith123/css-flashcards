@@ -13,13 +13,17 @@ export default class Flashcard extends Component {
     this.props.updateShowAnswerIndicator(false)
     if (this.props.correctAnswerIndex) {
       if (key === this.props.correctAnswerIndex) {
+        console.log('CORRECT!')
         this.setState({
           showAnswer: true,
           correctAnswerKey: key
         })
-      }      
+      } else {
+        this.props.storeWrongAnswer()
+      }     
     }          
   } 
+
 
   render() {
     return (
