@@ -102,7 +102,7 @@ export default class Welcome extends Component {
             <button className='new-player-input-back-btn' type='button' onClick={this.changeStateToPreviousState}><i className="fas fa-angle-left"></i></button>
           </div>
         ) : (
-          <div className='Welcome-two margin-remove'>
+          <div className={'Welcome-two margin-remove'}>
             <h1>  </h1>
           </div>            
         )}
@@ -110,7 +110,7 @@ export default class Welcome extends Component {
         {this.state.gameReady ? (
           <div className={this.state.gameReady ? 'Welcome-two slide-in' : 'Welcome-two'}>
             <h1 className='start-game-title'>Are you ready?</h1>
-            <button className='multipurpose-btn'>Let's go</button>
+            <button className='multipurpose-btn' onClick={this.props.gameActive}>Let's go</button>
             <button className='new-player-input-back-btn' type='button' onClick={this.changeStateToPreviousState}><i className="fas fa-angle-left"></i></button>
           </div>
         ) : (
