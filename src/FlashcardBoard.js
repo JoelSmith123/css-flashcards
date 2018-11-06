@@ -25,13 +25,15 @@ export default class FlashcardBoard extends Component {
     return (
       <div className='FlashcardBoard'>
         <Flashcard 
-          question={this.state.flashcardProblems ? this.state.flashcardProblems.question : null}
+          question={this.state.flashcardProblems ? this.state.flashcardProblems.question ? this.state.flashcardProblems.question : null : null}
+          codeFormatQuestion={this.state.flashcardProblems ? this.state.flashcardProblems.codeFormatQuestion ? this.state.flashcardProblems.codeFormatQuestion : null : null}
           correctAnswerIndex={this.state.flashcardProblems ? this.state.flashcardProblems.correctAnswerIndex : null}/>
         <Flashcard 
-          answers={this.state.flashcardProblems ? this.state.flashcardProblems.answers : null}
-          codeFormatAnswers={this.state.flashcardProblems ? this.state.flashcardProblems.codeFormatAnswers : null}
+          answers={this.state.flashcardProblems ? this.state.flashcardProblems.answers ? this.state.flashcardProblems.answers: null : null}
+          codeFormatAnswers={this.state.flashcardProblems ? this.state.flashcardProblems.codeFormatAnswers ? this.state.flashcardProblems.codeFormatAnswers: null : null}
           correctAnswerIndex={this.state.flashcardProblems ? this.state.flashcardProblems.correctAnswerIndex : null}
-          correctAnswer={this.state.flashcardProblems ? this.state.flashcardProblems.answers[this.state.flashcardProblems.correctAnswerIndex] : null}/>
+          correctAnswerCodeFormat={this.state.flashcardProblems ? this.state.flashcardProblems.codeFormatAnswers ? this.state.flashcardProblems.codeFormatAnswers[this.state.flashcardProblems.correctAnswerIndex] : null : null}
+          correctAnswer={this.state.flashcardProblems ? this.state.flashcardProblems.answers ? this.state.flashcardProblems.answers[this.state.flashcardProblems.correctAnswerIndex] : null : null}/>
       </div>
     );
   }

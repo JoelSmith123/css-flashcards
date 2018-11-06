@@ -20,11 +20,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.state.gameActive ? (
-          <FlashcardBoard />
-        ) : (
-          <Welcome gameActive={this.updateGameActiveState}/>
-        )}
+        {
+          // this.state.gameActive ? (
+            <FlashcardBoard />
+          // ) : (
+            // <Welcome gameActive={this.updateGameActiveState}/>
+         // )
+        }
       </div>
     );
   }
