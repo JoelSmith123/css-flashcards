@@ -5,7 +5,8 @@
 .Welcome-two {
   margin-top: -200px;
   margin-right: -500vw;
-  transition: all 500ms ease;
+  transition: margin-left 500ms ease,
+              margin-right 500ms ease;
 }
 
 .slide-out {
@@ -22,11 +23,7 @@
   padding-top: 200px;
 }
 
-.new-player-btn,
-.returning-player-btn,
-.returning-player-select-btn,
-.confidence-select-btn {
-  background: transparent;
+.multipurpose-btn {
   background-color: rgba(245, 245, 245, 0.2);
   border: 2px solid rgba(245, 245, 245, 0.3);
   border-radius: 12px;
@@ -45,7 +42,6 @@
 }
 
 .new-player-input {
-  background: transparent;
   background-color: rgba(245, 245, 245, 0.2);
   border: 2px solid rgba(245, 245, 245, 0.3);
   border-radius: 12px;
@@ -82,3 +78,14 @@
 .confidence-select-title {
   margin-top: -100px;
 }
+
+.start-game-title {
+  margin-top: -270px;
+}
+
+.margin-remove {
+  height: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
