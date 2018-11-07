@@ -10,10 +10,11 @@ export default class Flashcard extends Component {
   }
 
   checkAnswer = (key) => {
+    console.log('CHECKED!')
     this.props.updateShowAnswerIndicator(false)
     if (this.props.correctAnswerIndex) {
       if (key === this.props.correctAnswerIndex) {
-        console.log('CORRECT!')
+        console.log('MATCHES!')
         this.setState({
           showAnswer: true,
           correctAnswerKey: key
@@ -26,6 +27,7 @@ export default class Flashcard extends Component {
 
 
   render() {
+    console.log('showAnswer:', this.state.showAnswer)
     return (
       <div className={this.props.question ? 'Flashcard-question' : 'Flashcard-answer'}>
         <section className={this.props.question ? 'question-one question-one-left' : 'question-one'}>
@@ -44,7 +46,7 @@ export default class Flashcard extends Component {
               this.props.answers.map((answer, key) => {
                 if (this.state.correctAnswerKey){
                   if (key === this.state.correctAnswerKey) {
-                    return <p className='possible-answer correct-answer' key={key}>{answer}</p>
+                    return <p className='possible-answer correct-answer' key={key} onClick={() => { this.checkAnswer(key)} }>{answer}</p>
                   } else {
                     return <p className='possible-answer wrong-answer' key={key} onClick={() => { this.checkAnswer(key)} }>{answer}</p>
                   }                  
@@ -59,7 +61,7 @@ export default class Flashcard extends Component {
               this.props.codeFormatAnswers.map((answer, key) => {
                 if (this.state.correctAnswerKey){
                   if (key === this.state.correctAnswerKey) {
-                    return <p className='possible-answer correct-answer' key={key}><code>{answer}</code></p>
+                    return <p className='possible-answer correct-answer' key={key} onClick={() => { this.checkAnswer(key)} }><code>{answer}</code></p>
                   } else {
                     return <p className='possible-answer wrong-answer' key={key} onClick={() => { this.checkAnswer(key)} }><code>{answer}</code></p>
                   }                  
