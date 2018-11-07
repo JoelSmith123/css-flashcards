@@ -5,13 +5,23 @@ export default class FlashcardBoard extends Component {
   constructor() {
     super();
     this.state = {
+      returningPlayerFlashcardsArray: null,
       flashcardProblems: null,
       showAnswerIndicator: false
     };
   }
 
   componentDidMount() {
-    this.newAPICall();
+    if (!localStorage[this.props.playerName]) {
+      console.log('NEW API CALL')
+      this.newAPICall();      
+    } else {
+      let storedPlayerFlashcards = JSON.parse(localStorage[this.props.playerName]);
+      this.setState({
+        flashcardProblems: storedPlayerFlashcards[Math.floor(Math.random() * storedPlayerFlashcards.length) + 1]
+      })
+      console.log(this.state.flashcardProblems)
+    }
   }
 
   newAPICall = () => {
@@ -33,10 +43,19 @@ export default class FlashcardBoard extends Component {
 
   newFlashcardProblem = (e) => {
     e.preventDefault();
-    this.newAPICall();
-    this.setState({
-      showAnswerIndicator: false
-    })
+    if (!localStorage[this.props.playerName]) {
+      console.log('NEW API CALL')
+      this.newAPICall();
+      this.setState({
+        showAnswerIndicator: false
+      })      
+    } else {
+      let storedPlayerFlashcards = JSON.parse(localStorage[this.props.playerName]);
+      this.setState({
+        flashcardProblems: storedPlayerFlashcards[Math.floor(Math.random() * storedPlayerFlashcards.length) + 1]
+      })
+      console.log(this.state.flashcardProblems)
+    }
   }
 
   storeWrongAnswer = () => {

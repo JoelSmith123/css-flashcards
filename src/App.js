@@ -24,6 +24,13 @@ class App extends Component {
     })
   }
 
+  updateReturningPlayerName = (name) => {
+    this.setState({
+      playerName: name
+    })
+    this.updateGameActiveState()
+  }
+
   render() {
     return (
       <div className="App">
@@ -31,7 +38,7 @@ class App extends Component {
           this.state.gameActive ? (
             <FlashcardBoard playerName={this.state.playerName}/>
           ) : (
-            <Welcome gameActive={this.updateGameActiveState} playerName={this.state.playerName} acceptPlayerName={this.acceptPlayerName}/>
+            <Welcome gameActive={this.updateGameActiveState} playerName={this.state.playerName} acceptPlayerName={this.acceptPlayerName} updateReturningPlayerName={this.updateReturningPlayerName}/>
          )
         }
       </div>
