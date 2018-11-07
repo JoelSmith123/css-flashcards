@@ -13,7 +13,6 @@ export default class FlashcardBoard extends Component {
 
   componentDidMount() {
     if (!localStorage[this.props.playerName]) {
-      console.log('NEW API CALL')
       this.newAPICall();      
     } else {
       let storedPlayerFlashcards = JSON.parse(localStorage[this.props.playerName]);
@@ -43,8 +42,7 @@ export default class FlashcardBoard extends Component {
 
   newFlashcardProblem = (e) => {
     e.preventDefault();
-    if (!localStorage[this.props.playerName]) {
-      console.log('NEW API CALL')
+    if (!localStorage[this.props.playerName] || !this.props.returningPlayer) {
       this.newAPICall();
       this.setState({
         showAnswerIndicator: false
