@@ -7,8 +7,16 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      gameActive: null
+      gameActive: null,
+      playerName: '',
+      returningPlayer: false
     };
+  }
+
+  acceptPlayerName = (e) => {
+    this.setState({
+      playerName: e.target.value
+    })
   }
 
   updateGameActiveState = () => {
@@ -17,14 +25,24 @@ class App extends Component {
     })
   }
 
+  updateReturningPlayerName = (name) => {
+    this.setState({
+      playerName: name,
+      returningPlayer: true
+    })
+    this.updateGameActiveState()
+  }
+
   render() {
     return (
       <div className="App">
-        {this.state.gameActive ? (
-          <FlashcardBoard />
-        ) : (
-          <Welcome gameActive={this.updateGameActiveState}/>
-        )}
+        {
+          this.state.gameActive ? (
+            <FlashcardBoard playerName={this.state.playerName} returningPlayer={this.state.returningPlayer}/>
+          ) : (
+            <Welcome gameActive={this.updateGameActiveState} playerName={this.state.playerName} acceptPlayerName={this.acceptPlayerName} updateReturningPlayerName={this.updateReturningPlayerName}/>
+         )
+        }
       </div>
     );
   }
