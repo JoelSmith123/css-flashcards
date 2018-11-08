@@ -33,3 +33,8 @@ The goal of CSS Flashcards is to provide a user-friendly way to practise CSS fun
 ### Wireframes
 
 ![img_c4d6548a3b52-1](https://user-images.githubusercontent.com/28921373/48177749-91639700-e2d3-11e8-9acf-e444a85ac97d.jpeg)
+
+## 
+
+### Contributors
+ * Joel Smith [GitHub profile](https://github.com/JoelSmith123) [Twitter](https://twitter.com/j0elsmith123) [LinkedIn](https://www.linkedin.com/in/joelsmith123/)
