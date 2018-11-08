@@ -6,7 +6,6 @@ A React-based flashcard app that quizzes the player with CSS and SASS questions.
 
 ### Installation 
 ```
-
 git clone https://github.com/JoelSmith123/css-flashcards
 
 cd css-flashcards
