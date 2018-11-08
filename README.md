@@ -1,48 +1,36 @@
-<<<<<<< HEAD
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CSS Flashcards
 
-## Available Scripts
+A React-based flashcard app that quizzes the player with CSS and SASS questions.
 
-In the project directory, you can run:
+##
 
-### `npm start`
+### Installation 
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+git clone https://github.com/JoelSmith123/css-flashcards
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+cd css-flashcards
 
-### `npm test`
+npm install 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm start
+```
 
-### `npm run build`
+##
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This React app is a solo project, built with the purpose to practise conditional rendering, UI/UX design, localStorage manipulation, and React fundamentals. 
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+The goal of CSS Flashcards is to provide a user-friendly way to practise CSS fundamentals. At this time, CSS Flashcards is a work in progress. With future iterations, CSS Flashcard's UI may be refined or altered based off of user feedback, and features may be added or enhanced.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##
 
-### `npm run eject`
+### Technologies used for this project
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  * ReactJS
+  * SASS
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Wireframes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-=======
-# css-flashcards
->>>>>>> 917a1fcfe5e13456092dbdf7919eefa2d58ffea4
+![img_c4d6548a3b52-1](https://user-images.githubusercontent.com/28921373/48177749-91639700-e2d3-11e8-9acf-e444a85ac97d.jpeg)
