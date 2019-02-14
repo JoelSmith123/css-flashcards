@@ -37,4 +37,4 @@ The goal of CSS Flashcards is to provide a user-friendly way to practise CSS fun
 ## 
 
 ### Contributors
- * Joel Smith [GitHub](https://github.com/JoelSmith123) [Twitter](https://twitter.com/j0elsmith123) [LinkedIn](https://www.linkedin.com/in/joelsmith123/)
+ * Joel Smith [GitHub](https://github.com/JoelSmith123) [LinkedIn](https://www.linkedin.com/in/joelsmith123/)
